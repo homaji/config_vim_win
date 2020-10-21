@@ -1,0 +1,26 @@
+"Hide menu and Tool bar 
+set guioptions-=T
+set guioptions-=m
+
+nnoremap <silent> <C-F2> :<C-u>call <SID>toggle_guioptions()<CR> 
+
+function! s:toggle_guioptions()
+	if &guioptions =~# 'T' 
+		set guioptions-=T 
+		set guioptions-=m 
+	else 
+		set guioptions+=T 
+		set guioptions+=m 
+	endif 
+endfunction
+
+set guifont=Cica:h14:cSHIFTJIS:qDRAFT
+
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
+
+""Color Scheme
+set t_Co=256
+set background=dark
+colorscheme iceberg
