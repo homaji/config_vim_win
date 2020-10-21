@@ -25,6 +25,9 @@ call plug#begin(expand($VIMPLUG))
     Plug 'thinca/quickrun'
 call plug#end()
 
+"" Read setting files from init directory
+" https://mattn.kaoriya.net/software/vim/20191231001537.htm
+call map(sort(split(globpath(&runtimepath, '/init/*.vim'))), {->[execute('exec "so" v:val')]})
 
 ""Encoding
 set encoding=utf-8
