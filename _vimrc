@@ -22,6 +22,7 @@ call plug#begin(expand($VIMPLUG))
     Plug 'cocopon/iceberg.vim'
     Plug 'itchyny/lightline.vim'
     Plug 'vifm/vifm'
+    Plug 'thinca/quickrun'
 call plug#end()
 
 
