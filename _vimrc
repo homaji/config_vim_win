@@ -23,6 +23,7 @@ call plug#begin(expand($VIMPLUG))
     Plug 'itchyny/lightline.vim'
     Plug 'vifm/vifm'
     Plug 'thinca/vim-quickrun'
+    Plug 'tpope/vim-fugitive'
     ""LSP
     Plug 'prabirshrestha/vim-lsp'
     Plug 'prabirshrestha/async.vim'
