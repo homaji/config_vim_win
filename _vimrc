@@ -22,7 +22,10 @@ call plug#begin(expand($VIMPLUG))
     Plug 'cocopon/iceberg.vim'
     Plug 'itchyny/lightline.vim'
     Plug 'vifm/vifm'
-    Plug 'thinca/quickrun'
+    Plug 'thinca/vim-quickrun'
+    ""LSP
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'prabirshrestha/async.vim'
 call plug#end()
 
 "" Read setting files from init directory
