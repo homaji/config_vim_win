@@ -26,6 +26,17 @@ augroup END
 
 function! s:configure_lsp() abort
     setlocal omnifunc=lsp#complete "オムニ補完を有効化
+
+     nnoremap <buffer> gd :<C-u>LspDefinition<CR>
+     nnoremap <buffer> gD :<C-u>LspReferences<CR>
+     nnoremap <buffer> K  :<C-u>LspHover<CR>
     
 endfunction
 
+" ファイルの変更に伴いリアルタイムにエラーを表示するDiagonosticを有効化
+let g:lsp_diagnostics_enabled = 1
+" 自動で入力補完ポップアップを表示する設定
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 0
+" popupを表示するまでの遅延時間
+let g:asyncomplete_popup_delay = 200
