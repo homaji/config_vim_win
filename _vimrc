@@ -1,14 +1,15 @@
 "Basic Config
-filetype plugin on 
-filetype indent on 
+filetype plugin on
+filetype indent on
 syntax on
 syntax enable
 
 "" runtime path
-let $MY_VIMRUNTIME = $HOME . '/vimfiles'
+let $MY_VIMRUNTIME = $MY_HOME . '/vimfiles'
 let $VIMPLUG = $MY_VIMRUNTIME . '/plugged'
 
-"" ^=を使うことで、検索でぃれくとりを前に追加
+"" ^=を使うことで、検索ディレクトリを前に追加
+set runtimepath^=$MY_VIMRUNTIME
 set runtimepath^=$VIMPLUG
 
 "" Create Directory
@@ -23,10 +24,10 @@ call plug#begin(expand($VIMPLUG))
     Plug 'itchyny/lightline.vim'
     Plug 'vifm/vifm'
     Plug 'thinca/vim-quickrun'
-    Plug 'tpope/vim-fugitive'
+"    Plug 'tpope/vim-fugitive'
     ""LSP
-    Plug 'prabirshrestha/vim-lsp'
-    Plug 'prabirshrestha/async.vim'
+"    Plug 'prabirshrestha/vim-lsp'
+"    Plug 'prabirshrestha/async.vim'
 call plug#end()
 
 "" Read setting files from init directory
@@ -43,7 +44,7 @@ set backup
 set backupdir=$MY_VIMRUNTIME/vimtemp
 set directory=$MY_VIMRUNTIME/vimtemp
 set undodir=$MY_VIMRUNTIME/vimtemp
-set viminfo+=n$MY_VIMRUNTIME/viminfo.txt
+set viminfo+='1000,n$MY_VIMRUNTIME/viminfo.txt
 
 ""Use Clipboard"
 set clipboard=unnamed,autoselect
@@ -52,6 +53,7 @@ set clipboard=unnamed,autoselect
 set hidden
 
 ""set Wildmode. Bash like complement
+set wildmenu
 set wildmode=list:longest
 
 ""Search
