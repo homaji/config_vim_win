@@ -30,6 +30,7 @@ call plug#begin(expand($VIMPLUG))
     Plug 'plasticboy/vim-markdown'
     Plug 'tyru/open-browser.vim'
     Plug 'previm/previm'
+    Plug 'skanehira/preview-markdown.vim'
     ""LSP
 "    Plug 'prabirshrestha/vim-lsp'
 "    Plug 'prabirshrestha/async.vim'
@@ -154,3 +155,5 @@ set matchtime=1
 set t_Co=256
 set background=dark
 colorscheme iceberg
+
+let g:preview_markdown_parser=glow
