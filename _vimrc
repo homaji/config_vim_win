@@ -24,7 +24,12 @@ call plug#begin(expand($VIMPLUG))
     Plug 'itchyny/lightline.vim'
     Plug 'vifm/vifm'
     Plug 'thinca/vim-quickrun'
-"    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-fugitive'
+    ""For markdown
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'tyru/open-browser.vim'
+    Plug 'previm/previm'
     ""LSP
 "    Plug 'prabirshrestha/vim-lsp'
 "    Plug 'prabirshrestha/async.vim'
