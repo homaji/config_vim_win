@@ -18,24 +18,26 @@ let s:compl_key_dict = {
 
 " 表示メッセージ
 let s:hint_i_ctrl_x_msg = join([
-      \ '<C-l>: 行補完',
-      \ '<C-n>: ファイルの中のキーワード補完',
-      \ "<C-k>: 辞書(dictionary)からの補完",
-      \ "<C-t>: リスト(thesaurus)からの補完",
-      \ '<C-i>: 外部参照とファイルからのキーワード補完',
-      \ '<C-]>: タグファイル(tag)',
-      \ '<C-f>: ファイル名',
-      \ '<C-d>: マクロもしくは定義からの補完',
-      \ '<C-v>: Vimコマンドラインからの補完',
-      \ "<C-u>: ユーザー定義の補完 ('completefunc')",
-      \ "<C-o>: オムニ補完('omnifunc')",
-      \ "s: スペリング補完 ('spell')"
+      \ '<C-l>: "行補完"',
+      \ '<C-n>: "ファイルの中のキーワード補完"',
+      \ '<C-k>: "辞書(dictionary)からの補完"',
+      \ '<C-t>: "リスト(thesaurus)からの補完"',
+      \ '<C-i>: "外部参照とファイルからのキーワード補完"',
+      \ '<C-]>: "タグファイル(tag)"',
+      \ '<C-f>: "ファイル名"',
+      \ '<C-d>: "マクロもしくは定義からの補完"',
+      \ '<C-v>: "Vimコマンドラインからの補完"',
+      \ '<C-u>: "ユーザー定義の補完 (completefunc)"',
+      \ '<C-o>: "オムニ補完(omnifunc)"',
+      \ 's: "スペリング補完 (spell)"'
       \], "\n")
 
 function! s:hint_i_ctrl_x() abort
-    echo s:hint_i_ctrl_x_msg
-    let c = getchar()
-    return get(s:compl_key_dict, c, nr2char(c))
+  echo s:hint_i_ctrl_x_msg
+  let c = getchar()
+  return get(s:compl_key_dict, c, nr2char(c))
 endfunction
+ 
+inoremap <expr> <C-x>  <SID>hint_i_ctrl_x()
 
-inoremap <expr> <C-x> <SID>hint_i_ctrl_x()
+
