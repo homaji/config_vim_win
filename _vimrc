@@ -31,6 +31,7 @@ call plug#begin(expand($VIMPLUG))
     Plug 'tyru/open-browser.vim'
     Plug 'previm/previm'
     Plug 'skanehira/preview-markdown.vim'
+    Plug 'dhruvasagar/vim-table-mode'
     ""LSP
 "    Plug 'prabirshrestha/vim-lsp'
 "    Plug 'prabirshrestha/async.vim'
@@ -38,7 +39,7 @@ call plug#end()
 
 "" Read setting files from init directory
 " https://mattn.kaoriya.net/software/vim/20191231001537.htm
-call map(sort(split(globpath(&runtimepath, '/init/*.vim'))), {->[execute('exec "so" v:val')]})
+call map(sort(split(globpath($HOME, 'init/*.vim'))), {->[execute('exec "so" v:val')]})
 
 ""Encoding
 set encoding=utf-8
@@ -156,4 +157,3 @@ set t_Co=256
 set background=dark
 colorscheme iceberg
 
-let g:preview_markdown_parser=glow
