@@ -124,6 +124,14 @@ nnoremap <ESC><ESC> :<C-u>set nohlsearch!<CR>
 ""Toggle relativenumber
 nnoremap <F2> :<C-u>setlocal relativenumber!<CR>
 
+""For Terminal
+"change prefix
+"set termwinkey=<C-g>
+
+"USE Esc as key to normalmode
+tnoremap <Esc> <C-\><C-n>
+
+
 "Display Setting
 
 ""Cursol
