@@ -5,7 +5,7 @@ syntax on
 syntax enable
 
 "" runtime path
-let $MY_VIMRUNTIME = $MY_HOME . '/vimfiles'
+let $MY_VIMRUNTIME = $HOME . '/vimfiles'
 let $VIMPLUG = $MY_VIMRUNTIME . '/plugged'
 
 "" ^=を使うことで、検索ディレクトリを前に追加
@@ -25,6 +25,7 @@ call plug#begin(expand($VIMPLUG))
     Plug 'vifm/vifm'
     Plug 'thinca/vim-quickrun'
     Plug 'tpope/vim-fugitive'
+    Plug 'reireias/vim-cheatsheet'
     ""For markdown
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
