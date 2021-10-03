@@ -25,7 +25,7 @@ call plug#begin(expand($VIMPLUG))
     Plug 'vifm/vifm'
     Plug 'thinca/vim-quickrun'
     Plug 'tpope/vim-fugitive'
-    Plug 'reireias/vim-cheatsheet'
+    "" Plug 'reireias/vim-cheatsheet' neovim‚Å‚µ‚©Žg‚¦‚È‚¢
     ""For markdown
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'
@@ -164,3 +164,5 @@ set t_Co=256
 set background=dark
 colorscheme iceberg
 
+""SHell
+set shell=powershell
