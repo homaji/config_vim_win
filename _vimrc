@@ -13,8 +13,8 @@ set runtimepath^=$MY_VIMRUNTIME
 set runtimepath^=$VIMPLUG
 
 "" Create Directory
-if !isdirectory($MY_VIMRUNTIME . '/vimtemp')
-	call mkdir($MY_VIMRUNTIME . '/vimtemp', 'p')
+if !isdirectory($MY_VIMRUNTIME. '/vimtemp')
+	call mkdir($MY_VIMRUNTIME. '/vimtemp', 'p')
 endif
 
 "" Vim-Plug
@@ -46,7 +46,7 @@ call plug#end()
 
 "" Read setting files from init directory
 " https://mattn.kaoriya.net/software/vim/20191231001537.htm
-call map(sort(split(globpath($HOME, 'init/*.vim'))), {->[execute('exec "so" v:val')]})
+call map(sort(split(globpath($HOME, 'vim-init/*.vim'))), {->[execute('exec "so" v:val')]})
 
 ""Encoding
 set encoding=utf-8
@@ -55,10 +55,10 @@ set fileencodings=utf-8,cp932
 ""Directories
 set autochdir
 set backup
-set backupdir=$MY_VIMRUNTIME/vimtemp
-set directory=$MY_VIMRUNTIME/vimtemp
-set undodir=$MY_VIMRUNTIME/vimtemp
-set viminfo+='1000,n$MY_VIMRUNTIME/viminfo.txt
+set backupdir=$MY_VIMRUNTIME\vimtemp
+set directory=$MY_VIMRUNTIME\vimtemp
+set undodir=$MY_VIMRUNTIME\vimtemp
+set viminfo+='1000,n$MY_VIMRUNTIME\viminfo.txt
 
 ""Use Clipboard"
 set clipboard=unnamed,autoselect
